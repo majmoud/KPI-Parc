@@ -1,0 +1,43 @@
+{
+    "Libelle": "PAIEMENT FACTURE Hors CANALPLUS",
+    "colparc": "SENDER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "=",
+                    "value": [
+                        "PAIEMENT FACTURE"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sender category code Filter",
+            "value": [
+                {
+                    "col": "sender_category_code",
+                    "operator": "=",
+                    "value": [
+                        "SUBS"
+                    ]
+                }
+            ]
+        }     
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

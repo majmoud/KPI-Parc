@@ -1,0 +1,45 @@
+{
+    "Libelle": "Parc e-recharge (Achat crédit téléphonique, pass, illimix)",
+    "colparc": "SENDER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "IN",
+                    "value": [
+                        "TOP UP",
+                        "PAIEMENT MARCHAND"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Receiver_grade_name",
+            "value": [
+                {
+                    "col": "receiver_grade_name",
+                    "operator": "IN",
+                    "value": [
+                        "Achat Pass Internet HEAD Grade",
+                        "ACHAT PASS ILLIMIX MARCHAND GRADE"
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

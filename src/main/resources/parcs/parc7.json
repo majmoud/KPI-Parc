@@ -1,0 +1,43 @@
+{
+    "Libelle": "Transfert inter-régional Envoi",
+    "colparc": "SENDER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "=",
+                    "value": [
+                        "IRT OUT"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "TRANSFER_SUBTYPE filter",
+            "value": [
+                {
+                    "col": "TRANSFER_SUBTYPE",
+                    "operator": "=",
+                    "value": [
+                        "CASHOUT"
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

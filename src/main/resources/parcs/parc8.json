@@ -1,0 +1,60 @@
+{
+    "Libelle": "Bank to Wallet IN",
+    "colparc": "RECEIVER_MSISDN",
+    "filters": [
+        {
+            "name": "Transactions status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction_tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "=",
+                    "value": [
+                        "B2W IN"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "TRANSFER_SUBTYPE filter",
+            "value": [
+                {
+                    "col": "TRANSFER_SUBTYPE",
+                    "operator": "=",
+                    "value": [
+                        "CASHIN"
+                      
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sender_grade_name filter",
+            "value": [
+                {
+                    "col": "Sender_grade_name",
+                    "operator": "IN",
+                    "value": [
+                        "OMBA UBA GRADE",
+                        "OMBA DBS GRADE",
+                        "OMBA ECOBANK Grade",
+                        "OMBA Grade",
+                        "IMF grade"
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

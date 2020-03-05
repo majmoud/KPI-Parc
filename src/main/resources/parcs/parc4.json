@@ -1,0 +1,44 @@
+{
+    "Libelle": "PAIEMENT FACTURE CANALPLUS",
+    "colparc": "SENDER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Recever_designation filter",
+            "value": [
+                {
+                    "col": "receiver_designation",
+                    "operator": "=",
+                    "value": [
+                        "CANALPLUS"
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

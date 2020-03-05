@@ -1,0 +1,43 @@
+{
+    "Libelle": "Paiement de salaire",
+    "colparc": "RECEIVER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "=",
+                    "value": [
+                        "PAIEMENT SALAIRE"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "TRANSFER_SUBTYPE filter",
+            "value": [
+                {
+                    "col": "TRANSFER_SUBTYPE",
+                    "operator": "=",
+                    "value": [
+                        "CASHIN"
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

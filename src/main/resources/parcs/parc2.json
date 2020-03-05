@@ -1,0 +1,36 @@
+{
+    "Libelle": "CASHOUT - P2P - CASHOUT ATM - COLLECTE DE FONDS - INITIALISATION P2P NON ORANGE ",
+    "colparc": "SENDER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "IN",
+                    "value": [
+                        "CASHOUT",
+                        "P2P",
+                        "CASHOUT ATM",
+                        "COLLECTE DE FONDS",
+                        "INITIALISATION P2P NON ORANGE"
+                        
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

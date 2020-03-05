@@ -1,0 +1,68 @@
+{
+    "Libelle": "PAIEMENT MARCHAND",
+    "colparc": "SENDER_MSISDN",
+    "filters": [
+        {
+            "name": "Transaction status filter",
+            "value": [
+                {
+                    "col": "Transactions_status",
+                    "operator": "=",
+                    "value": [
+                        "TS"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transaction tag filter",
+            "value": [
+                {
+                    "col": "Transaction_tag",
+                    "operator": "IN",
+                    "value": [
+                        "PAIEMENT MARCHAND",
+                        "ECOMMERCE"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Receiver_grade_name filter",
+            "value": [
+                {
+                    "col": "receiver_grade_name",
+                    "operator": "IN",
+                    "value": [
+                        "Total MR RET Fusion GRADE",
+                        "EDKMARCHAND MERCHANTS GRADE",
+                        "ELTON MR RET FUSION GRADE",
+                        "CIEL OIL MR RET FUSION GRADE",
+                        "WMS TITANOIL MERCHANT GRADE"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Receiver_grade_name filter",
+            "value": [
+                {
+                    "col": "receiver_grade_name",
+                    "operator": "NOT IN",
+                    "value": [
+                        "Total MR RET Fusion GRADE",
+                        "EDKMARCHAND MERCHANTS GRADE",
+                        "ELTON MR RET FUSION GRADE",
+                        "CIEL OIL MR RET FUSION GRADE",
+                        "WMS TITANOIL MERCHANT GRADE",
+                        "ACHAT PASS ILLIMIX MARCHAND GRADE",
+                        "Pass Internet HEAD Grade",
+                        "canalplus",
+                        "SENAC Domain GRADE"
+                    ]
+                }
+            ]
+        }
+    ],
+    "groupby"  : ["Transaction_tag"]
+}

@@ -1,0 +1,30 @@
+{
+  "Libelle" : "CASHIN - Transfert compte à compte - Réception transfert international",
+  "colparc" : "RECEIVER_MSISDN",
+  "filters" :
+  [
+    {
+      "name"  :"Transaction status filter",
+      "value" :
+      [
+        {
+          "col"       : "Transactions_status",
+          "operator"  : "=",
+          "value"     : ["TS"]
+        }
+      ]
+    },
+    {
+      "name"  : "Transaction tag filter",
+      "value" :
+      [
+        {
+          "col"       : "Transaction_tag",
+          "operator"  : "IN",
+          "value"     : ["CASHIN", "P2P", "TRANSFERT INTERNATIONAL IN"]
+        }
+      ]
+    }
+  ],
+  "groupby"  : ["Transaction_tag"]
+}
